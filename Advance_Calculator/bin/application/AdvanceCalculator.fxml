@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="562.0" prefWidth="492.0" styleClass="anchorpane" stylesheets="@../../bin/application/application.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AdvanceCalculatorController">
+   <children>
+      <AnchorPane layoutX="7.0" layoutY="4.0" prefHeight="148.0" prefWidth="478.0" styleClass="anchorpanetop" stylesheets="@application.css" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="7.0">
+         <children>
+            <AnchorPane layoutX="9.0" layoutY="8.0" prefHeight="130.0" prefWidth="460.0" styleClass="anchorpanetop2" stylesheets="@application.css" AnchorPane.leftAnchor="9.0" AnchorPane.rightAnchor="9.0">
+               <children>
+                  <Label fx:id="resultField" alignment="CENTER_RIGHT" layoutX="15.0" layoutY="26.0" prefHeight="95.0" prefWidth="430.0" styleClass="textfield" stylesheets="@application.css" textFill="#828483" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0">
+                     <font>
+                        <Font name="Times New Roman Bold" size="50.0" />
+                     </font>
+                  </Label>
+                  <Text fill="WHITE" layoutX="155.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ADVANCED CALCULATOR" AnchorPane.leftAnchor="155.0" AnchorPane.rightAnchor="154.00390625">
+                     <font>
+                        <Font name="Times New Roman" size="12.0" />
+                     </font>
+                  </Text>
+                  <Label fx:id="variable" layoutX="18.0" layoutY="26.0" prefHeight="21.0" prefWidth="424.0" styleClass="textfield2" textAlignment="RIGHT" textFill="#656867" AnchorPane.leftAnchor="18.0" AnchorPane.rightAnchor="18.0">
+                     <font>
+                        <Font name="Times New Roman" size="15.0" />
+                     </font></Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="7.2" layoutY="158.4" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" styleClass="anchorpane2" stylesheets="@application.css" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="158.4">
+         <children>
+            <GridPane layoutX="100.0" layoutY="14.0" styleClass="anchorpane2" AnchorPane.bottomAnchor="-6.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Button fx:id="DEL" mnemonicParsing="false" onAction="#delete" styleClass="btn2" stylesheets="@application.css" text="DEL" textAlignment="CENTER" textFill="#cd738c" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="Times New Roman Bold" size="16.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#toggleSign" prefHeight="26.0" prefWidth="50.0" styleClass="btn2" text="+/-" textFill="#cd738c" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="Times New Roman Bold" size="19.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#ClearFunction" prefHeight="26.0" prefWidth="50.0" styleClass="btn2" stylesheets="@application.css" text="AC" textFill="#cd738c" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="Times New Roman Bold" size="19.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#processBinaryOperator" prefHeight="26.0" prefWidth="50.0" styleClass="btn2" text="+" textFill="#cd738c" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="Times New Roman Bold" size="22.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#processUnaryOperator" prefHeight="26.0" prefWidth="50.0" styleClass="btn2" text="FLR" textFill="#cd738c" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="Times New Roman Bold" size="16.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#processUnaryOperator" prefHeight="26.0" prefWidth="50.0" styleClass="btn2" text="CEIL" textFill="#cd738c" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="Times New Roman Bold" size="14.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#processUnaryOperator" prefHeight="26.0" prefWidth="50.0" styleClass="btn2" text="INT" textFill="#cd738c" GridPane.columnIndex="6">
+                     <font>
+                        <Font name="Times New Roman Bold" size="17.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#processNumber" prefHeight="26.0" prefWidth="50.0" styleClass="btn" text="7" textFill="#ffebfc" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="Times New Roman Bold" size="20.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#processNumber" prefHeight="26.0" prefWidth="50.0" styleClass="btn" text="8" textFill="#ffebfc" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="Times New Roman Bold" size="20.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#processNumber" prefHeight="26.0" prefWidth="50.0" styleClass="btn" text="4" textFill="#ffebfc" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Times New Roman Bold" size="20.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#processNumber" prefHeight="26.0" prefWidth="50.0" styleClass="btn" text="5" textFill="#ffebfc" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Times New Roman Bold" size="20.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#processNumber" prefHeight="26.0" prefWidth="50.0" styleClass="btn" text="9" textFill="#ffebfc" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="Times New Roman Bold" size="20.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#processNumber" prefHeight="26.0" prefWidth="50.0" styleClass="btn" text="6" textFill="#ffebfc" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Times New Roman Bold" size="20.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#processBinaryOperator" prefHeight="26.0" prefWidth="50.0" styleClass="btn2" stylesheets="@application.css" text="-" textFill="#cd738c" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="Times New Roman Bold" size="20.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin></Button>
+                  <Button mnemonicParsing="false" onAction="#processBinaryOperator" prefHeight="26.0" prefWidth="50.0" styleClass="btn2" text="*" textFill="#cd738c" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="Times New Roman Bold" size="25.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#processBinaryOperator" prefHeight="26.0" prefWidth="50.0" styleClass="btn" text="//" textFill="#ffebfc" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Times New Roman Bold" size="22.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#processUnaryOperator" prefHeight="26.0" prefWidth="50.0" styleClass="btn" text="√" textFill="#ffebfc" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Times New Roman Bold" size="23.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#processBinaryOperator" prefHeight="26.0" prefWidth="50.0" styleClass="btn" text="\%" textFill="#ffebfc" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Times New Roman Bold" size="20.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#calculateFactorial" prefHeight="26.0" prefWidth="50.0" styleClass="btn" text="N!" textFill="#ffebfc" GridPane.columnIndex="6" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Times New Roman Bold" size="20.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#processNumber" prefHeight="26.0" prefWidth="50.0" styleClass="btn" text="1" textFill="#ffebfc" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="Times New Roman Bold" size="20.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#processNumber" prefHeight="26.0" prefWidth="50.0" styleClass="btn" text="2" textFill="#ffebfc" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="Times New Roman Bold" size="20.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#processNumber" prefHeight="26.0" prefWidth="50.0" styleClass="btn" text="3" textFill="#ffebfc" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="Times New Roman Bold" size="20.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#processBinaryOperator" prefHeight="26.0" prefWidth="50.0" styleClass="btn2" text="/" textFill="#cd738c" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="Times New Roman Bold" size="22.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#processBinaryOperator" prefHeight="26.0" prefWidth="50.0" styleClass="btn" text="xʸ" textFill="#ffebfc" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="Times New Roman Bold" size="20.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#processUnaryOperator" prefHeight="26.0" prefWidth="50.0" styleClass="btn" text="∛" textFill="#ffebfc" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Times New Roman Bold" size="21.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#handleSummation" prefHeight="26.0" prefWidth="50.0" styleClass="btn" text="∑" textFill="#ffebfc" GridPane.columnIndex="6" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Times New Roman Bold" size="19.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#handlePowerOperation" prefHeight="26.0" prefWidth="50.0" styleClass="btn" text="(xʸ)ᶻ" textFill="#ffebfc" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="Times New Roman Bold" size="18.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#handleProductNotation" prefHeight="26.0" prefWidth="50.0" styleClass="btn" text="Π" textFill="#ffebfc" GridPane.columnIndex="6" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="Times New Roman Bold" size="21.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#processNumber" prefHeight="26.0" prefWidth="50.0" styleClass="btn" text="0" textFill="#ffebfc" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="Times New Roman Bold" size="20.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#processNumber" prefHeight="26.0" prefWidth="50.0" styleClass="btn" text="." textFill="#ffebfc" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="Times New Roman Bold" size="20.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#processBinaryOperator" prefHeight="26.0" prefWidth="50.0" styleClass="btn2" text="=" textFill="#cd738c" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="Times New Roman Bold" size="20.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#handleDoubleSummation" prefHeight="26.0" prefWidth="50.0" styleClass="btn3" text="∑ ∑" textFill="#ffebfc" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="Times New Roman Bold" size="19.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#handleDoubleProductNotation" prefHeight="26.0" prefWidth="50.0" styleClass="btn3" text="Π Π" textFill="#ffebfc" GridPane.columnIndex="5" GridPane.columnSpan="2" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="Times New Roman Bold" size="20.0" />
+                     </font></Button>
+                  <Button fx:id="Quadratic" mnemonicParsing="false" onAction="#handleQuadraticEquation" prefHeight="26.0" prefWidth="50.0" styleClass="btn4" text="x = (-b ± √(b^2 - 4ac)) / (2a)" textFill="#ffebfc" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="Times New Roman Bold" size="14.0" />
+                     </font></Button>
+                  <Button fx:id="handleSetA" mnemonicParsing="false" onAction="#handleSetA" prefHeight="35.0" prefWidth="126.0" styleClass="btn3" text="A&amp;X" textFill="#ffebfc" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="6">
+                     <font>
+                        <Font name="Times New Roman Bold" size="20.0" />
+                     </font></Button>
+                  <Button fx:id="B" mnemonicParsing="false" onAction="#handleSetB" prefHeight="35.0" prefWidth="139.0" styleClass="btn3" text="B&amp;Y" textFill="#ffebfc" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="6">
+                     <font>
+                        <Font name="Times New Roman Bold" size="20.0" />
+                     </font></Button>
+                  <Button fx:id="C" mnemonicParsing="false" onAction="#handleSetC" prefHeight="35.0" prefWidth="133.0" styleClass="btn3" text="C&amp;Z" textFill="#ffebfc" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="7">
+                     <font>
+                        <Font name="Times New Roman Bold" size="20.0" />
+                     </font></Button>
+                  <Button fx:id="D" mnemonicParsing="false" onAction="#handleSetD" prefHeight="26.0" prefWidth="50.0" styleClass="btn3" text="D" textFill="#ffebfc" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="7">
+                     <font>
+                        <Font name="Times New Roman Bold" size="20.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#processUnaryOperator" prefHeight="26.0" prefWidth="50.0" styleClass="btn3" text="log₂ x" textFill="#ffebfc" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="5">
+                     <font>
+                        <Font name="Times New Roman Bold" size="20.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#processUnaryOperator" prefHeight="26.0" prefWidth="50.0" styleClass="btn3" text="log x" textFill="#ffebfc" GridPane.columnIndex="5" GridPane.columnSpan="2" GridPane.rowIndex="5">
+                     <font>
+                        <Font name="Times New Roman Bold" size="20.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#handleFactorialSum" prefHeight="26.0" prefWidth="50.0" styleClass="btn4" text="a! + b!" textFill="#ffebfc" GridPane.columnIndex="4" GridPane.columnSpan="3" GridPane.rowIndex="6">
+                     <font>
+                        <Font name="Times New Roman Bold" size="20.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#handleFactorialDivision" prefHeight="26.0" prefWidth="50.0" styleClass="btn4" text="a! / b!" textFill="#ffebfc" GridPane.columnIndex="4" GridPane.columnSpan="3" GridPane.rowIndex="7">
+                     <font>
+                        <Font name="Times New Roman Bold" size="20.0" />
+                     </font></Button>
+                  <Text fill="#cd738c" strokeType="OUTSIDE" strokeWidth="0.0" text="BSIT - 2A" wrappingWidth="145.39617538452148" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.rowIndex="8">
+                     <font>
+                        <Font name="Times New Roman Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#cd738c" strokeType="OUTSIDE" strokeWidth="0.0" text="DATA STRUCTURES AND ALGORITHM" wrappingWidth="253.39603805541992" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="8">
+                     <font>
+                        <Font name="Times New Roman Bold" size="13.0" />
+                     </font>
+                  </Text>
+               </children>
+            </GridPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
